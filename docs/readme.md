@@ -1,4 +1,4 @@
-# Timeleft [![Go](https://github.com/BetaPictoris/timeleft/actions/workflows/go.yml/badge.svg)](https://github.com/BetaPictoris/timeleft/actions/workflows/go.yml)
+# Time Left [![Go](https://github.com/BetaPictoris/timeleft/actions/workflows/go.yml/badge.svg)](https://github.com/BetaPictoris/timeleft/actions/workflows/go.yml)
 Display the time left of the day as a progress bar. 
 
 ![timeleft-colour](https://user-images.githubusercontent.com/65696362/155674372-203151f6-bf40-42ac-87a4-b5cb6b512a2d.png)
