@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
+	"strconv"
 	"strings"
 	"time"
 
@@ -16,12 +18,42 @@ const (
 )
 
 func main() {
+	var mode = "shift" // Mode can be 'day' or 'shift'
+
 	var hour = time.Now().Hour()
 	var minute = time.Now().Minute()
-	var minutesInADay = 1440.00
+	var length = 1440.
+
+	var shiftL = 8.0
+
+	// Check if --shift is in args
+	if len(os.Args) >= 2 {
+		if "--shift" == os.Args[1] {
+			if len(os.Args) >= 3 {
+				shiftL, _ = strconv.ParseFloat(os.Args[2], 64)
+			}
+			mode = "shift"
+		} else {
+			fmt.Println("Usage: timeleft [--shift [Shift length]]")
+			os.Exit(1)
+		}
+	}
+
+	if mode == "shift" {
+		c, b := exec.Command("uptime"), new(strings.Builder)
+		c.Stdout = b
+		c.Run()
+
+		var time = strings.Split(b.String(), " ")[1]
+
+		hour, _ = strconv.Atoi(strings.Split(time, ":")[0])
+		minute, _ = strconv.Atoi(strings.Split(time, ":")[1])
+
+		length = (shiftL * 60)
+	}
 
 	var time = float64(((hour * 60) + minute))
-	var per = float64(time / minutesInADay)
+	var per = float64(time / length)
 
 	prog(int(time), per)
 }
