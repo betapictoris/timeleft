@@ -18,7 +18,7 @@ const (
 )
 
 func main() {
-	var mode = "shift" // Mode can be 'day' or 'shift'
+	var mode = "day" // Mode can be 'day' or 'shift'
 
 	var hour = time.Now().Hour()
 	var minute = time.Now().Minute()
