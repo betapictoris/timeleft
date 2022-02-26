@@ -14,7 +14,7 @@ sudo install -Dt /usr/local/bin -m 755 timeleft                                 
 ### Build from source 
 ```bash
 git clone git@github.com:BetaPictoris/timeleft.git      # Clone the repository
-cd timeleft                                             # Change into the repository's
+cd timeleft                                             # Change into the repository's directory
 bash build.sh                                           # Build Time Left
 sudo install -Dt /usr/local/bin -m 755 timeleft         # Install Time Left to "/usr/local/bin" with the mode "755"
 ```
