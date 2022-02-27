@@ -18,3 +18,9 @@ cd timeleft                                             # Change into the reposi
 bash build.sh                                           # Build Time Left
 sudo install -Dt /usr/local/bin -m 755 timeleft         # Install Time Left to "/usr/local/bin" with the mode "755"
 ```
+
+### User install
+If you don't have access to `sudo` on your system you can install to your user's `~/.local/bin` directory with this command: 
+```bash
+install -Dt ~/.local/bin -m 755 timeleft
+```
