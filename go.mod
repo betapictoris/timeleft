@@ -1,4 +1,4 @@
-module betapictoris/timeleft
+module github.com/BetaPictoris/timeleft
 
 go 1.17
 
