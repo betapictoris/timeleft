@@ -11,6 +11,11 @@ curl -LO https://github.com/BetaPictoris/timeleft/releases/latest/download/timel
 sudo install -Dt /usr/local/bin -m 755 timeleft                                        # Install Time Left to "/usr/local/bin" with the mode "755"
 ```
 
+### Using [Goblin](https://github.com/barelyhuman/goblin)
+```bash
+curl -sf https://goblin.reaper.im/github.com/BetaPictoris/timeleft/src | OUT=timeleft sh
+```
+
 ### Build from source 
 ```bash
 git clone git@github.com:BetaPictoris/timeleft.git      # Clone the repository
