@@ -2,6 +2,9 @@
 
 Display the time left of the day as a progress bar.
 
+> [!WARNING]
+> Time Left is considered to be complete and archived. 
+
 [![timeleft](./assets/timeleft.svg)](https://github.com/BetaPictoris/timeleft)
 
 ## Installation
